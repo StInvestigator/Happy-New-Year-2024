@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows7.0</TargetFramework>
     <RootNamespace>Happy_New_Year_2024</RootNamespace>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -16,7 +16,6 @@
     <None Remove="JEMA LUIS 383-02.jpg" />
     <None Remove="Screenshot 2023-12-24 094127.png" />
   </ItemGroup>
-
   <ItemGroup>
     <Resource Include="1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -33,6 +32,8 @@
     <Resource Include="Screenshot 2023-12-24 094127.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <PackageReference Include="MaterialDesignColors" Version="2.1.4" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
   </ItemGroup>
 
 </Project>
