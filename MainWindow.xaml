@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TextBox HorizontalAlignment="Center" Margin="0,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="29"/>
+        <PasswordBox HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Width="120" Height="29"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="270,170,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="270,219,0,0" VerticalAlignment="Top"/>
+        <Image Margin="616,275,72,21" Source="/1.png"/>
+        <Image Margin="73,49,627,285" Source="/2.png" Stretch="Fill"/>
+        <Image Margin="672,49,45,188" Source="/32.png" Stretch="Fill"/>
+        <Image Margin="48,249,564,36" Source="/Screenshot 2023-12-24 094127.png" Stretch="Fill"/>
+        <Image Margin="293,10,292,286" Source="/JEMA LUIS 383-02.jpg" Stretch="Fill"/>
     </Grid>
 </Window>
