@@ -18,6 +18,28 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="1.png" />
+    <None Remove="2.png" />
+    <None Remove="32.png" />
+    <None Remove="JEMA LUIS 383-02.jpg" />
+    <None Remove="Screenshot 2023-12-24 094127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="JEMA LUIS 383-02.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Screenshot 2023-12-24 094127.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <PackageReference Include="MaterialDesignColors" Version="2.1.4" />
     <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
     <PackageReference Include="WpfAnimatedGif" Version="1.4.18" />
