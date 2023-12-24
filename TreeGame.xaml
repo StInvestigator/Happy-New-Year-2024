@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Happy_New_Year_2024.TreeGame"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Happy_New_Year_2024"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1000" MouseLeftButtonDown="MouseDown">
+    <Grid Name="MainGrid">
+        <Image Source="https://lifeimg.pravda.com/images/doc/0/4/04b1615-26101981-depositphotos1320.jpg" Margin="-296,-197,-283,-217" Opacity="0.5">
+            <UIElement.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </UIElement.RenderTransform>
+        </Image>
+        <Image Source="https://parspng.com/wp-content/uploads/2023/01/treepng.parspng.com-2.png" Margin="129,0,87,10"/>
+        <Canvas Name="MainCanvas"/>
+    </Grid>
+</UserControl>
