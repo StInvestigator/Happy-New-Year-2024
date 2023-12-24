@@ -16,5 +16,6 @@
         <Image Margin="672,49,45,188" Source="/32.png" Stretch="Fill"/>
         <Image Margin="48,249,564,36" Source="/Screenshot 2023-12-24 094127.png" Stretch="Fill"/>
         <Image Margin="293,10,292,286" Source="/JEMA LUIS 383-02.jpg" Stretch="Fill"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="371,270,0,0" VerticalAlignment="Top" Height="35" Width="64"/>
     </Grid>
 </UserControl>

@@ -4,6 +4,12 @@
              xmlns:local="clr-namespace:Happy_New_Year_2024"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <BitmapImage x:Key="Image1" UriSource="/1.png" />
+            <BitmapImage x:Key="Image2" UriSource="/2.png" />
+            <BitmapImage x:Key="Image32" UriSource="/32.png" />
+            <BitmapImage x:Key="Screenshot" UriSource="/Screenshot 2023-12-24 094127.png" />
+            <BitmapImage x:Key="JEMALUIS" UriSource="/JEMA LUIS 383-02.jpg" />
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
