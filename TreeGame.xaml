@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1000" MouseLeftButtonDown="MouseDown">
     <Grid Name="MainGrid">
-        <Image Source="https://lifeimg.pravda.com/images/doc/0/4/04b1615-26101981-depositphotos1320.jpg" Margin="-296,-197,-283,-217" Opacity="0.5">
+        <Image Source="https://www.iphone2lovely.com/newyear/wp-content/uploads/2022/08/happy-new-year-desktop-background-2024.jpg" Margin="-140,-44,-216,0" Opacity="1">
             <UIElement.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -17,7 +17,16 @@
                 </TransformGroup>
             </UIElement.RenderTransform>
         </Image>
-        <Image Source="https://parspng.com/wp-content/uploads/2023/01/treepng.parspng.com-2.png" Margin="129,0,87,10"/>
+        <Image Source="https://parspng.com/wp-content/uploads/2023/01/treepng.parspng.com-2.png" Margin="-152,13,368,-3"/>
+        <Rectangle Margin="740,589,41,0">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Gold" />
+            </Rectangle.Fill>
+        </Rectangle>
         <Canvas Name="MainCanvas"/>
+        <Canvas Name="SideCanvas" Margin="780,633,86,44" RenderTransformOrigin="0.598,0.567"/>
+        <Label Content="Selected:" FontSize="35" Margin="740,589,41,123" Height="80"/>
+        <Button Background="Gold" Content="Change" FontSize="40" Margin="740,500,41,170" Height="70"/>
+        <Button Background="Gold" Content="Clear" FontSize="40" Margin="740,400,41,200" Height="70" Click="Clear_Click"/>
     </Grid>
 </UserControl>

@@ -39,6 +39,20 @@ namespace Happy_New_Year_2024
             Toy toy = new Toy(new Image());
             toy.Img.Source = image;
             ToysList.newToy(toy);
+
+            selectedLoad();
+        }
+        void selectedLoad()
+        {
+            SideCanvas.Children.Clear();
+            if (ToysList.selectedToy != null)
+            {
+                Image img = new Image();
+                img.Source = ToysList.selectedToy.Img.Source;
+                img.Width = 125;
+                img.Height = 125;
+                SideCanvas.Children.Add(img);
+            }
         }
 
         private void MouseDown(object sender, MouseButtonEventArgs e)
@@ -58,12 +72,19 @@ namespace Happy_New_Year_2024
                 Canvas.SetLeft(image, res.X); //set x coordinate of Image
                 Canvas.SetTop(image, res.Y); //set y coordinate of Image
                 ToysList.toys.Add(ToysList.selectedToy);
-                ToysList.selectedToy = null;
 
                 Toy toy = new Toy(new Image());
                 toy.Img.Source = image.Source;
                 ToysList.newToy(toy);
             }
+        }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            ToysList.toys.Clear();
+            ToysList.selectedToy = null;
+            MainCanvas.Children.Clear();
+            selectedLoad();
         }
     }
 }
