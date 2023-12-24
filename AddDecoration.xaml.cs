@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfAnimatedGif;
 
 namespace Happy_New_Year_2024
 {
@@ -22,6 +23,20 @@ namespace Happy_New_Year_2024
         public AddDecoration()
         {
             InitializeComponent();
+        }
+
+        private void Confirm_Click(object sender, RoutedEventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(URL_TB.Text))
+            {
+                MessageBox.Show("Null url text box!","Error",MessageBoxButton.OK,MessageBoxImage.Error);
+                return;
+            }
+            else
+            {
+                string url = URL_TB.Text;
+
+            }
         }
     }
 }
