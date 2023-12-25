@@ -22,11 +22,11 @@
                 <SolidColorBrush Color="White" />
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="D:\SHAG\visual save\Happy New Year 2024\Fon.png" Margin="-100,-22,-100,-178" Grid.RowSpan="2"/>
+        <Image Source="D:\SHAG\visual save\Happy New Year 2024\Presentation\Assets\Fon.png" Margin="-100,-22,-100,-178" Grid.RowSpan="2"/>
         <WrapPanel Grid.Row="0" Margin="205,1,125,30">
-            <Image Source="D:\SHAG\visual save\Happy New Year 2024\PresentBox.png" Margin="130 0 0 0" Width="50"/>
+            <Image Source="D:\SHAG\visual save\Happy New Year 2024\Presentation\Assets\PresentBox.png" Margin="130 0 0 0" Width="50"/>
             <Label Style="{DynamicResource Pacifico}" Margin="20,0,0,0" Content="Happy New Year!" FontSize="40" HorizontalContentAlignment="Center"/>
-            <Image Source="D:\SHAG\visual save\Happy New Year 2024\HzChtoZaDecoratsiya.png" Margin="20 10 0 0" Width="50"/>
+            <Image Source="D:\SHAG\visual save\Happy New Year 2024\Presentation\Assets\HzChtoZaDecoratsiya.png" Margin="20 10 0 0" Width="50"/>
         </WrapPanel>
         <Border Grid.RowSpan="2" Height="800" Width="20" HorizontalAlignment="Right" Background="#d13854"/>
         <Border Grid.RowSpan="2" Height="800" Width="5" Margin="0,60,19,0" HorizontalAlignment="Right" Background="#4f7942"/>
@@ -36,7 +36,7 @@
         <Border Grid.RowSpan="2" Height="5" Width="953" Margin="0,0,0,19" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="#4f7942" Panel.ZIndex="1"/>
         <Border Grid.Row="0" Height="80" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#d13854"/>
         <Border Height="74" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#d13854" Margin="861,12,0,0"/>
-        <Image Source="D:\SHAG\visual save\Happy New Year 2024\AddDecoration_ChristmasTree.png" HorizontalAlignment="Left" Height="86" Width="91" Margin="54,2,0,0" Panel.ZIndex="1" VerticalAlignment="Top"/>
+        <Image Source="D:\SHAG\visual save\Happy New Year 2024\Presentation\Assets\AddDecoration_ChristmasTree.png" HorizontalAlignment="Left" Height="86" Width="91" Margin="54,2,0,0" Panel.ZIndex="1" VerticalAlignment="Top"/>
         <Border Grid.Row="0" Height="20" Width="1000" Background="#d13854" Margin="0,50,0,0"/>
         <Border Grid.Row="0" Height="5" Width="675" Margin="80,30,0,0" Background="#4f7942"/>
         <Border Grid.Row="0" Height="20" Width="885" Margin="80,0,0,110" Background="#d13854"/>
@@ -51,9 +51,9 @@
             <Label Height="77" Style="{DynamicResource Pacifico}" FontSize="45" Width="272" HorizontalAlignment="Center" Content="Enter URL" HorizontalContentAlignment="Center" Foreground="White"/>
             <TextBox x:Name="URL_TB" Height="40" Width="500" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White" Foreground="Black" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="25" FontFamily="Times New Roman"/>
             <WrapPanel>
-                <Image Source="D:\SHAG\visual save\Happy New Year 2024\Bells.png" Height="160" Width="160" HorizontalAlignment="Left" Margin="10,40,0,0"/>
+                <Image Source="D:\SHAG\visual save\Happy New Year 2024\Presentation\Assets\Bells.png" Height="160" Width="160" HorizontalAlignment="Left" Margin="10,40,0,0"/>
                 <Button Height="50" Width="220" HorizontalAlignment="Center" Margin="170,0,0,0" Background="Green" Content="Confirm" FontSize="26" Foreground="White" Click="Confirm_Click"/>
-                <Image Source="D:\SHAG\visual save\Happy New Year 2024\Candy.png" Height="160" Width="160" HorizontalAlignment="Right" Margin="150,40,0,0"/>
+                <Image Source="D:\SHAG\visual save\Happy New Year 2024\Presentation\Assets\Candy.png" Height="160" Width="160" HorizontalAlignment="Right" Margin="150,40,0,0"/>
             </WrapPanel>
         </StackPanel>
     </Grid>

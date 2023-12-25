@@ -25,19 +25,19 @@
     <None Remove="Screenshot 2023-12-24 094127.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="1.png">
+    <Resource Include="Presentation\Assets\1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="2.png">
+    <Resource Include="Presentation\Assets\2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="32.png">
+    <Resource Include="Presentation\Assets\32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="JEMA LUIS 383-02.jpg">
+    <Resource Include="Presentation\Assets\JEMA LUIS 383-02.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Screenshot 2023-12-24 094127.png">
+    <Resource Include="Presentation\Assets\Screenshot 2023-12-24 094127.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <PackageReference Include="MaterialDesignColors" Version="2.1.4" />
