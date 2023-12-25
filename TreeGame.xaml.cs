@@ -22,6 +22,7 @@ namespace Happy_New_Year_2024
     /// </summary>
     public partial class TreeGame : UserControl
     {
+        List<bool> secret = new List<bool>();
         public TreeGame()
         {
             InitializeComponent();
@@ -85,19 +86,67 @@ namespace Happy_New_Year_2024
             toy.Img.Source = image;
             ToysList.newToy(toy);
         }
+        private void setSecretToy()
+        {
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("https://cdn-icons-png.flaticon.com/512/3692/3692220.png");
+            image.EndInit();
+            Toy toy = new Toy(new Image());
+            toy.Img.Source = image;
+            ToysList.newToy(toy);
+        }
         private void spawnTheToy(double x, double y)
         {
-            ToysList.selectedToy.x = x;
-            ToysList.selectedToy.y = y;
-            Image image = ToysList.selectedToy.Img;
-            MainCanvas.Children.Add(image);
-            Canvas.SetLeft(image, x); //set x coordinate of Image
-            Canvas.SetTop(image, y); //set y coordinate of Image
-            ToysList.toys.Add(ToysList.selectedToy);
 
-            Toy toy = new Toy(new Image());
-            toy.Img.Source = image.Source;
-            ToysList.newToy(toy);
+            if (x >= 750 && y <= 320 && Santa.Visibility == Visibility.Visible)
+            {
+                Santa.Visibility = Visibility.Hidden;
+                setSecretToy();
+                selectedLoad();
+            }
+            else if(x <= 650 || y<=400)
+            {
+                ToysList.selectedToy.x = x;
+                ToysList.selectedToy.y = y;
+                Image image = ToysList.selectedToy.Img;
+                MainCanvas.Children.Add(image);
+                Canvas.SetLeft(image, x); //set x coordinate of Image
+                Canvas.SetTop(image, y); //set y coordinate of Image
+                ToysList.toys.Add(ToysList.selectedToy);
+
+                Toy toy = new Toy(new Image());
+                toy.Img.Source = image.Source;
+                ToysList.newToy(toy);
+            }
+        }
+
+        private void UserControl_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Left && (secret.Count == 0 || secret.Count == 3))
+            {
+                secret.Add(true);
+            }
+            else if (e.Key == Key.Right && (secret.Count == 1 || secret.Count == 2))
+            {
+                secret.Add(true);
+            }
+            else if (e.Key == Key.Up && (secret.Count == 4))
+            {
+                secret.Add(true);
+            }
+            else if (e.Key == Key.Down && (secret.Count == 5))
+            {
+                secret.Add(true);
+            }
+            else
+            {
+                secret.Clear();
+            }
+            if (secret.Count == 6)
+            {
+                Santa.Visibility = Visibility.Visible;
+            }
         }
     }
 }

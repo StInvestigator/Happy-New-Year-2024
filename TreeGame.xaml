@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Happy_New_Year_2024"
              mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="1000" MouseLeftButtonDown="MouseDown">
+             d:DesignHeight="800" d:DesignWidth="1000" MouseLeftButtonDown="MouseDown" KeyDown="UserControl_KeyDown">
     <Grid Name="MainGrid">
         <Image Source="https://www.iphone2lovely.com/newyear/wp-content/uploads/2022/08/happy-new-year-desktop-background-2024.jpg" Margin="-140,-44,-216,0" Opacity="1">
             <UIElement.RenderTransform>
@@ -28,5 +28,15 @@
         <Label Content="Selected:" FontSize="35" Margin="740,589,41,123" Height="80"/>
         <Button Background="Gold" Content="Change" FontSize="40" Margin="740,500,41,170" Height="70" Click="Change_Click"/>
         <Button Background="Gold" Content="Clear" FontSize="40" Margin="740,400,41,200" Height="70" Click="Clear_Click"/>
+        <Image Source="https://static.vecteezy.com/system/resources/previews/015/723/274/non_2x/santa-claus-cartoon-free-png.png" Name="Santa" Visibility="Hidden" Margin="471,-46,-325,271" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-65.826"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </UserControl>
