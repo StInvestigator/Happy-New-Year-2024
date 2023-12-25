@@ -26,7 +26,7 @@
         <Canvas Name="MainCanvas"/>
         <Canvas Name="SideCanvas" Margin="780,633,86,44" RenderTransformOrigin="0.598,0.567"/>
         <Label Content="Selected:" FontSize="35" Margin="740,589,41,123" Height="80"/>
-        <Button Background="Gold" Content="Change" FontSize="40" Margin="740,500,41,170" Height="70"/>
+        <Button Background="Gold" Content="Change" FontSize="40" Margin="740,500,41,170" Height="70" Click="Change_Click"/>
         <Button Background="Gold" Content="Clear" FontSize="40" Margin="740,400,41,200" Height="70" Click="Clear_Click"/>
     </Grid>
 </UserControl>

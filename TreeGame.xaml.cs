@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Academy.Domain.Navigation;
+using System;
 using System.Collections.Generic;
 using System.DirectoryServices.ActiveDirectory;
 using System.Linq;
@@ -27,18 +28,16 @@ namespace Happy_New_Year_2024
 
             foreach (var item in ToysList.toys)
             {
-                MainCanvas.Children.Add(item.Img);
-                Canvas.SetLeft(item.Img, item.x); //set x coordinate of Image
-                Canvas.SetTop(item.Img, item.y); //set y coordinate of Image
+                Image image = new Image();
+                image.Source = item.Img.Source;
+                image.Width = item.Img.Width;
+                image.Height = item.Img.Height;
+                MainCanvas.Children.Add(image);
+                Canvas.SetLeft(image, item.x); //set x coordinate of Image
+                Canvas.SetTop(image, item.y); //set y coordinate of Image
             }
 
-            BitmapImage image = new BitmapImage();
-            image.BeginInit();
-            image.UriSource = new Uri("https://static.vecteezy.com/system/resources/previews/011/016/172/original/red-christmas-ball-cutout-free-png.png");
-            image.EndInit();
-            Toy toy = new Toy(new Image());
-            toy.Img.Source = image;
-            ToysList.newToy(toy);
+            if(ToysList.selectedToy==null) setDefaultToy();
 
             selectedLoad();
         }
@@ -62,29 +61,43 @@ namespace Happy_New_Year_2024
                 
                 var res = Mouse.GetPosition(this);
 
-                res.X -= 25;
-                res.Y -= 25;
-
-                ToysList.selectedToy.x = res.X;
-                ToysList.selectedToy.y = res.Y;
-                Image image = ToysList.selectedToy.Img;
-                MainCanvas.Children.Add(image);
-                Canvas.SetLeft(image, res.X); //set x coordinate of Image
-                Canvas.SetTop(image, res.Y); //set y coordinate of Image
-                ToysList.toys.Add(ToysList.selectedToy);
-
-                Toy toy = new Toy(new Image());
-                toy.Img.Source = image.Source;
-                ToysList.newToy(toy);
+                spawnTheToy(res.X-25, res.Y-25);
             }
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
             ToysList.toys.Clear();
-            ToysList.selectedToy = null;
             MainCanvas.Children.Clear();
-            selectedLoad();
+        }
+
+        private void Change_Click(object sender, RoutedEventArgs e)
+        {
+            NavigatorObject.Switch(new AddToy());
+        }
+        private void setDefaultToy()
+        {
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("https://static.vecteezy.com/system/resources/previews/011/016/172/original/red-christmas-ball-cutout-free-png.png");
+            image.EndInit();
+            Toy toy = new Toy(new Image());
+            toy.Img.Source = image;
+            ToysList.newToy(toy);
+        }
+        private void spawnTheToy(double x, double y)
+        {
+            ToysList.selectedToy.x = x;
+            ToysList.selectedToy.y = y;
+            Image image = ToysList.selectedToy.Img;
+            MainCanvas.Children.Add(image);
+            Canvas.SetLeft(image, x); //set x coordinate of Image
+            Canvas.SetTop(image, y); //set y coordinate of Image
+            ToysList.toys.Add(ToysList.selectedToy);
+
+            Toy toy = new Toy(new Image());
+            toy.Img.Source = image.Source;
+            ToysList.newToy(toy);
         }
     }
 }

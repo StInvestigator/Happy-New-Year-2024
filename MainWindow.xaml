@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Happy_New_Year_2024"
+        Icon="D:\SHAG\visual save\Happy New Year 2024\AddDecoration_ChristmasTree.png"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1000" ResizeMode="NoResize">
+        Title="Decorate the Christmas tree!" Height="800" Width="1000" ResizeMode="NoResize">
 </Window>

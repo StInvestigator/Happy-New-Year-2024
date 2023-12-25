@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Academy.Domain.Navigation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,11 @@ namespace Happy_New_Year_2024
         public login()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigatorObject.Switch(new TreeGame());
         }
     }
 }

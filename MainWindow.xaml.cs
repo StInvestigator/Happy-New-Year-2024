@@ -21,7 +21,7 @@ namespace Happy_New_Year_2024
         {
             InitializeComponent();
             NavigatorObject.pageSwitcher = this;
-            NavigatorObject.Switch(new TreeGame());
+            NavigatorObject.Switch(new login());
         }
         public void Navigate(UserControl nextPage)
         {
